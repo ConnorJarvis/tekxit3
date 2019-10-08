@@ -14,9 +14,7 @@ RUN apt install unzip wget  -y
 RUN \
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   apt-get update && \
-  apt-get install -y software-properties-common wget unzip sudo maven git-core python-pip python-dev build-essential && \
-  sudo pip install --upgrade pip && \
-  sudo pip install --upgrade b2 && \
+  apt-get install -y wget unzip sudo git-core && \
   wget https://raw.githubusercontent.com/chrishantha/install-java/master/install-java.sh && \
   wget https://b2.vangel.io/file/vangel-cdn/jdk-8u211-linux-x64.tar.gz && \
   chmod +x install-java.sh && \
